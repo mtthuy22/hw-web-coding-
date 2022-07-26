@@ -1,0 +1,75 @@
+.services{
+    font-size: $primary-text;
+    display: grid;
+    margin: 20px 0 20px 0;
+
+    @media (min-width: $desktop){
+        display: grid;
+        grid-template-columns: 490px 490px;
+        gap: 60px;
+        font-size: $primary-text;
+    }
+
+   &__list{
+    display: grid;
+    gap: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+     @media (min-width: $tablet){
+        //justify-self: center; 
+        //display: grid;
+        // grid-template-columns: repeat(3, 230px);
+        // gap: 20px;
+       display: flex;
+       justify-content: space-evenly;
+     }
+     @media (min-width: $desktop){
+         display: grid;
+         grid-template-columns: repeat(3, 170px);
+         gap: 20px;
+
+     }
+     &--left{
+         @media (min-width: $desktop){
+         grid-column: 1/2;
+         grid-row: 1/2;
+         }
+     }
+   }
+   &__intro {
+       @media (min-width: $desktop){
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+       }
+       &--right{
+           @media (min-width: $desktop){
+           grid-column: 2/3;
+           grid-row: 1/2;
+        }
+       }
+   }
+   &__item{
+       display: grid;
+       grid-template-columns: 45px 1fr;
+       background-color: $white-color;
+       border-radius: 10px;
+       font-size: $service-text;
+       box-shadow: 5px 5px 5px $shadow-color;
+       padding: 20px;
+       @media (min-width: $tablet){
+           display: grid;
+           grid-template-columns: 1fr;
+           grid-template-rows: 45px auto;
+           justify-items: center;
+       }
+       @media (min-width: $desktop){
+           justify-items: center;
+       }
+   }
+   &__logo{
+       margin-right: 20px;
+   }
+ 
+}

@@ -1,0 +1,65 @@
+.intro {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  font-size: $primary-text;
+  margin: 20px 0 20px 0; 
+  justify-items: center;
+
+  @media (min-width: $desktop){
+    display: grid;
+    grid-template-columns: 490px 490px;
+    gap: 60px;
+    row-gap: 80px;
+    
+  }
+
+  &__image{
+
+    @media (min-width: $desktop){
+      grid-column: 2/3;
+      grid-row: 1/2;
+      align-self: center;
+    }
+  }
+ 
+  &__text{
+    @media (min-width: $desktop){
+      grid-column: 1/2;
+      grid-row: 1/2;
+    }
+  }
+
+  &__content{
+    margin-left: 20px 40px;
+  }
+
+  &__title::after {
+    content: "";
+    display: block;
+    border-bottom: solid 2px $blue-color;
+    width: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+  }
+
+
+  &__button {
+    display: inline-block;
+    text-decoration: none;
+    color: $white-color;
+    background-color: $grey-color;
+    font-weight: $button-weight;
+    font-size: $button-text;
+    border-radius: 20px;
+    padding: 10px 30px;
+    margin: 10px;
+    
+    &--active{
+      background-color: $blue-color;
+    }
+  }
+
+
+  }
+

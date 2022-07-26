@@ -1,0 +1,36 @@
+html {
+  box-sizing: border-box;
+}
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body{
+    font-family: $primary-font;
+    background-color: $background-color;
+    font-size: $primary-text;
+    font-weight: $text-weight;
+    color:$grey-color;
+    padding: 60px 20px;
+    margin: auto;
+    @media (min-width: $desktop){
+      max-width: 1040px;
+      //margin: auto;
+    }
+}
+
+main{
+text-align: center;
+row-gap: 60px;
+@media (min-width: $desktop){
+  display: grid;
+  grid-template-rows:  354px repeat(2, 190px);
+  row-gap: 80px;
+}
+}
+
+h1, h2{
+  color: $title-color;
+}
